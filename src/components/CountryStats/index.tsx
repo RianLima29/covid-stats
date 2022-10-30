@@ -16,11 +16,11 @@ export default function CountryStats({ data }: Props) {
       </C.InfoContainer>
       <C.InfoContainer>
         <RiVirusFill color="green" />
-        <C.Info>{data.confirmed}</C.Info>
+        <C.Info>{data.confirmed.toLocaleString()}</C.Info>
       </C.InfoContainer>
       <C.InfoContainer>
         <GiCoffin color="brown" />
-        <C.Info>{data.deaths}</C.Info>
+        <C.Info>{data.deaths.toLocaleString()}</C.Info>
       </C.InfoContainer>
     </C.Container>
   );
