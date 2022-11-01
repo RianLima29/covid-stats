@@ -19,10 +19,10 @@ export const ContentContainer = styled.div`
   width: 100vw;
   display: flex;
   align-items: start;
-  justify-content: start;
+  justify-content: space-evenly;
   max-width: 100%;
   padding: 15px;
-  background-color: #3F4E4F;
+  background-color: black;
 `;
 
 export default GlobalStyle;

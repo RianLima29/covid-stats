@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/containers/Header";
 import CountryStatsList from "./components/CountryStatsList";
+import StateStatsList from './components/StateStatsList'
 import * as C from "./GlobalStyle";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       />
       <C.ContentContainer>
         <CountryStatsList />
+        <StateStatsList/>
       </C.ContentContainer>
     </>
   );

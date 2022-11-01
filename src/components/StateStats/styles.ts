@@ -11,6 +11,7 @@ export const Container = styled.div`
   justify-content: space-evenly;
   max-width: 100%;
   width: 100%;
+  transition: 1s;
 `;
 
 export const InfoContainer = styled.div`

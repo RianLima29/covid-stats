@@ -31,6 +31,7 @@ export const Container = styled.div`
   background-color: black;
   border: 1px solid transparent;
   transition: 0.5s;
+
   border: 1px solid #f2f2f2;
 
   @media (max-width: 500px) {
