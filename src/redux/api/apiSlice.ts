@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { Country, CountryData } from "./apiTypes";
+import { StateData, CountryData } from "./apiTypes";
 
 export const api = createApi({
   reducerPath: "api",
@@ -10,7 +10,10 @@ export const api = createApi({
     getDataFromAllCountries: build.query<CountryData, void>({
       query: () => "/report/v1/countries",
     }),
+    getDataFromAllStates: build.query<StateData, void>({
+        query: () => "/report/v1"
+    })
   }),
 });
 
-export const { useGetDataFromAllCountriesQuery } = api;
+export const { useGetDataFromAllCountriesQuery, useGetDataFromAllStatesQuery} = api;

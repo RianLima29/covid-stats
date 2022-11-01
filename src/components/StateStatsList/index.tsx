@@ -1,21 +1,21 @@
 import React from "react";
 import * as C from "./styles";
-import { useGetDataFromAllCountriesQuery } from "../../redux/api/apiSlice";
-import CountryStats from "../CountryStats";
+import { useGetDataFromAllStatesQuery } from "../../redux/api/apiSlice";
+import StateStats from "../StateStats";
 import { AiOutlineLoading } from "react-icons/ai";
 import SearchBar from "../SearchBar";
-import { Country } from "../../redux/api/apiTypes";
+import {State} from "../../redux/api/apiTypes";
 
-export default function CountryStatsList() {
-  const { data, error, isLoading } = useGetDataFromAllCountriesQuery();
+export default function StateStatsList() {
+  const { data, error, isLoading } = useGetDataFromAllStatesQuery();
   const [filteredData, setFilteredData] = React.useState<
-    Country[] | undefined
+    State[] | undefined
   >();
 
   const canDisplayData = !isLoading && !error;
 
   const content = filteredData?.map((item, index) => (
-    <CountryStats data={item} key={index} />
+    <StateStats data={item} key={index} />
   ));
 
   return (
@@ -23,8 +23,8 @@ export default function CountryStatsList() {
       {canDisplayData && (
         <>
           <SearchBar
-            placeholder="Search by country..."
-            filterBy="country"
+            placeholder="Search by brazilian state"
+            filterBy="state"
             data={data}
             setFilteredData={setFilteredData}
           />
